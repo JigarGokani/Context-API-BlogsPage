@@ -3,10 +3,10 @@ import { baseUrl } from "../baseUrl";
 
 
 // Step 1
-export const Appcontext = createContext();
+export const AppContext = createContext();
 
 
-function AppContextProvider({children}){
+export default function AppContextProvider({children}){
 
     const[loading,setLoading] = useState(false);
     const[posts,setPosts]=useState([]);
@@ -66,8 +66,8 @@ function AppContextProvider({children}){
 
 
 // Step 2
-    return <Appcontext.Provider value={value}>
+    return <AppContext.Provider value={value}>
                 {children}
-           </Appcontext.Provider>
+           </AppContext.Provider>
 
 }

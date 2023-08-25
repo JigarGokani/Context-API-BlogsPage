@@ -2,10 +2,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header>
-        <div>
+    <header className='flex justify-center border-b-2 border-black'>
+        <h1 className='text-3xl font-bold'>
             Jigar Blogs
-        </div>
+        </h1>
     </header>
   )
 }
