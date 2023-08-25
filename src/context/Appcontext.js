@@ -30,10 +30,23 @@ function AppContextProvider({children}){
 
 
 
-        }
-        catch(error){
 
         }
+        catch(error){
+            console.log("Error in fetching data");
+            setPage(1);
+            setPosts([]);
+            setTotalPages(null);
+
+        }
+        setLoading(false);
+
+    }
+
+    function handlePageChange(page)
+    {
+        setPage(page);
+        fetchBlogsPosts(page);
 
     }
 
@@ -46,7 +59,9 @@ function AppContextProvider({children}){
         page,
         setPage,
         totalPages,
-        setTotalPages
+        setTotalPages,
+        fetchBlogsPosts,
+        handlePageChange
     };
 
 
