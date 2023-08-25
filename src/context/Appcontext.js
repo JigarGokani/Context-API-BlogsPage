@@ -26,7 +26,7 @@ export default function AppContextProvider({children}){
 
             setPage(data.page);
             setPosts(data.posts);
-            setTotalPages(data.totalpages);
+            setTotalPages(data.totalPages);
 
 
 
